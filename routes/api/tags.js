@@ -8,5 +8,7 @@ router.get('/', function(req, res, next) {
     return res.json({tags: tags});
   }).catch(next);
 });
-
+router.get('/teste', function(req, res, next){
+	return res.json({responseCode: 200, message: "Teste Update"});
+});
 module.exports = router;
