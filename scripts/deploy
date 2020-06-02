@@ -1,0 +1,7 @@
+ssh root@3.235.145.66 <<EOF
+ cd /opt/node-express-realworld-example-app
+ git pull
+ npm install
+ pm2 restart all
+ exit
+EOF
