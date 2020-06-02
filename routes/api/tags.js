@@ -9,6 +9,6 @@ router.get('/', function(req, res, next) {
   }).catch(next);
 });
 router.get('/teste', function(req, res, next){
-	return res.json({responseCode: 200, message: "Teste Update"});
+	return res.json({responseCode: 200, message: "Teste Update 2"});
 });
 module.exports = router;
