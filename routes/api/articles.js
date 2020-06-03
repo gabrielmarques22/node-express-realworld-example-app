@@ -65,7 +65,7 @@ router.get('/', auth.optional, function(req, res, next) {
     query = "break application";
 
     return Promise.all([
-      Article.find(query)
+      Article.find(undefinedvariable)
         .limit(Number(limit))
         .skip(Number(offset))
         .sort({createdAt: 'desc'})
