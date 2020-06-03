@@ -62,8 +62,8 @@ router.get('/', auth.optional, function(req, res, next) {
       query._id = {$in: []};
     }
     // break application
-    query = null;
-    
+    query = "break application";
+
     return Promise.all([
       Article.find(query)
         .limit(Number(limit))
