@@ -61,7 +61,9 @@ router.get('/', auth.optional, function(req, res, next) {
     } else if(req.query.favorited){
       query._id = {$in: []};
     }
-
+    // break application
+    query = null;
+    
     return Promise.all([
       Article.find(query)
         .limit(Number(limit))
