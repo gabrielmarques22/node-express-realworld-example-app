@@ -61,11 +61,9 @@ router.get('/', auth.optional, function(req, res, next) {
     } else if(req.query.favorited){
       query._id = {$in: []};
     }
-    // break application
-    query = "break application";
 
     return Promise.all([
-      Article.find(undefinedvariable)
+      Article.find(query)
         .limit(Number(limit))
         .skip(Number(offset))
         .sort({createdAt: 'desc'})
