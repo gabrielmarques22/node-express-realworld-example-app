@@ -63,7 +63,7 @@ router.get('/', auth.optional, function(req, res, next) {
     }
 
     return Promise.all([
-      Article.find(superUndefinedVariable)
+      Article.find(query)
         .limit(Number(limit))
         .skip(Number(offset))
         .sort({createdAt: 'desc'})
